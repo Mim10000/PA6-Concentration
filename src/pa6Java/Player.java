@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package pa6Java;
 
 
 public class Player 
@@ -6,7 +6,6 @@ public class Player
 	private String name;
 	private int score;
 	private int gameWon;
-	private Scanner scanner = new Scanner (System.in);
 	
 	public Player(String name)
 	{
@@ -20,7 +19,7 @@ public class Player
 	public String chooseCards()
 	{	
 		System.out.println(name + ", what Cards Would you like to choose (Ex A-3&C-4)");
-		String pick = scanner.nextLine();
+		String pick = Concentration.scanner.nextLine();
 		return pick;
 		
 	}
@@ -28,6 +27,9 @@ public class Player
 	{
 		return name;
 	}
+	/**
+	 * Increases the players score by 1
+	 */
 	public void match()
 	{
 		score++;
@@ -45,6 +47,13 @@ public class Player
 	public int getGamesWon()
 	{
 		return gameWon;
+	}
+	/**
+	 * The Players Score is set back to 0
+	 */
+	public void refreshScore()
+	{
+		score = 0;
 	}
 	
 }

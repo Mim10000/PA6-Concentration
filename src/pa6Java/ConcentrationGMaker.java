@@ -1,3 +1,4 @@
+package pa6Java;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
@@ -39,8 +40,8 @@ public class ConcentrationGMaker
 		{
 			for(int j=0; j< width; j++)
 			{
-				String n = "n";
-				while (n.equals("n"))
+				String n = "~";
+				while (n.equals("~"))
 				{
 					int choose = r.nextInt(2);
 					//System.out.println("QuestionsSize? " + questions.size() );
